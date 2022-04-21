@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições de velocidade</title>
+    <style>
+        body{
+            background-color: gray;
+            font-size: 1.5em;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        input{
+            width: 100px;
+            background-color: rgb(169, 169, 243);
+        }
+        div#Resultado{
+            padding-top: 20px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Simtema de multas</h1>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> KM/H
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="Resultado">Resultado...</div>
+    <script> 
+        function calcular(){
+            var txtv = window.document.getElementById('txtvel')
+            var numv = Number(txtv.value)
+            var res = window.document.getElementById('Resultado')
+            if (numv > 60){
+                res.innerHTML = `A velocidade do seu veículo é ${numv}. <strong>Você foi multado!</strong>`
+                multa = window.document.getElementsByTagName('strong')[0]
+                multa.style.color = 'red'
+            } else{
+                res.innerHTML = `A velocidade do seu veículo é ${numv}. <strong>Boa viagem!</strong>`
+            }
+
+        }
+    </script>
+</body>
+</html>
