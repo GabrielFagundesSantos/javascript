@@ -14,16 +14,17 @@
     </style>
 </head>
 <body>
-    <h1>Iniciando estudos com DOM</h1>
+    <h1 name="FundoAmarelo">Iniciando estudos com DOM</h1>
     <p>Aqui vai o resultado</p>
     <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
     <div id="msg">Clique em mim</div>
 
     <script>
         var corpo = window.document.body
-        var p1 = window.document.getElementsByTagName('p')[1]
-        var d = window.document.getElementById('msg')
-        d.style.background = 'yellow'
+        var p1 = window.document.getElementById('msg')
+        var fundo = window.document.querySelector('div#msg')
+        p1.style.color = 'red'
+        fundo.innerHTML = 'TESTE'
     </script>
 </body>
 </html>
