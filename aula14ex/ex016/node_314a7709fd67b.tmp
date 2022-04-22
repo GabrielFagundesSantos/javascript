@@ -1,5 +1,5 @@
-ini = 1
-fim = 10
+ini = 10
+fim = 1
 passo = 1
 if (ini < fim){
     while(ini <= fim){
@@ -8,8 +8,8 @@ if (ini < fim){
     }
 }else{
     while(ini >= fim){
-        console.log(`Passo ${ini}`)
-        ini -= passo 
+        console.log(`Passo ${fim}`)
+        fim -= passo 
     }
 }
 
