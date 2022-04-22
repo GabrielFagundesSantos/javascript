@@ -12,7 +12,8 @@ function contar(){
         window.alert('Favor preencher os campos')
     }else {
             for(var g = inicio; g <= fim; g += passo){
-                res.innerHTML += g
+                res.innerHTML = g
+                
             }
             
         }
