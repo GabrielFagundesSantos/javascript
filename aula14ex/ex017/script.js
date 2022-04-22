@@ -10,11 +10,13 @@ while (conta <= 10){
 */
 
 function Calcula(){
-    var txttab = window.document.getElementById('txttab')
-    var valor = Number(txttab.value)
-    var res = window.document.getElementById('res')
+    let txttab = window.document.getElementById('txttab')
+    let valor = Number(txttab.value)
+    let res = window.document.getElementById('res')
+    res.innerHTML = 'Calculando: <br>'
     if (txttab.value.length == 0){
         window.alert('Valor inválido')
+        res.innerHTML = 'Aguardando valor válido'
     } else{
         conta = 0
         while(conta <= 10){
