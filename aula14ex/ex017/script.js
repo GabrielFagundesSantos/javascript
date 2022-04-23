@@ -11,17 +11,20 @@ while (conta <= 10){
 
 function Calcula(){
     let txttab = window.document.getElementById('txttab')
-    let valor = Number(txttab.value)
-    let res = window.document.getElementById('res')
-    res.innerHTML = 'Calculando: <br>'
+    let tab = window.document.getElementById('seltab')
     if (txttab.value.length == 0){
         window.alert('Valor inválido')
-        res.innerHTML = 'Aguardando valor válido'
+        tab.innerHTML = 'TESTE'
     } else{
-        conta = 0
+        let valor = Number(txttab.value)
+        let conta = 0
+        tab.innerHTML = ''
         while(conta <= 10){
+            let item = document.createElement('option')
             Total = valor * conta
-            res.innerHTML += `${conta} x ${valor} = ${Total}<br>` 
+            item.text = `${conta} x ${valor} = ${Total}` 
+            item.value = `tab${conta}`
+            tab.appendChild(item)
             conta++
         }
     }
